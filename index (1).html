@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BILLIONAIRE GANG APPLICATION FORM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #000080;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #000022;
+      padding: 25px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid red;
+      box-shadow: 0 0 25px red, 0 0 50px rgba(255, 0, 0, 0.5);
+      color: white;
+      overflow-y: auto;
+      max-height: 95vh;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #ff0000;
+    }
+
+    p {
+      text-align: center;
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #00bfff;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid red;
+      background: #001144;
+      color: white;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    /* --- CHECKBOX ALIGN FIX --- */
+    .checkbox-group {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns para pantay layout */
+      gap: 8px 20px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #00bfff;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: red; /* red check color */
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: red;
+      color: white;
+      border: none;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px red;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      box-shadow: 0 0 20px #00bfff;
+      background: #00bfff;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container" id="syndiForm">
+    <h2>GOOD MORNING / AFTERNOON / EVENING 🌙</h2>
+    <p>Please fill out the form to join. Be polite and respectful. Thank you!</p>
+    <h3>🔷 BILLIONAIRE GANG CLUB 🔷<br>🎮 APPLICATION FORM 🎮</h3>
+
+    <label>• Full Name:</label><input type="text" name="fullName" required>
+    <label>• Age:</label><input type="number" name="age" required>
+    <label>• Gender:</label>
+    <select name="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>• CPM ID:</label><input type="text" name="cpmId" required>
+    <label>• In-Game Name:</label><input type="text" name="gameName" required>
+
+    <label>• Are you active in events like collabs, car meets, and competitions? (Yes/No):</label>
+    <input type="text" name="activeEvents">
+
+    <label>• Last Clan you joined:</label><input type="text" name="lastClan">
+
+    <label>• Why did you leave your last clan?</label><textarea name="reasonLeave"></textarea>
+
+    <label>• Do you know how to do daily tasks? (Yes/No):</label>
+    <input type="text" name="dailyTasks">
+
+    <label>• Why do you want to join BILLIONAIRE GANG ?</label><textarea name="whyJoin"></textarea>
+
+    <label>• Are you a student or working?</label><input type="text" name="status">
+
+    <label>• Do you have a valid ID? (School ID / National ID):</label><input type="text" name="validId">
+
+    <label>✅ Select your skills / active roles:</label>
+    <div class="checkbox-group">
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Designer"> DESIGNER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Copier"> COPIER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Photographer"> PHOTOGRAPHER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Videographer"> VIDEOGRAPHER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Editor"> EDITOR</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Recruiter"> RECRUITER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="GG User"> GG USER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Termux User"> TERMUX USER</label>
+      <label class="checkbox-item"><input type="checkbox" name="roles" value="Content Creator"> CONTENT CREATOR</label>
+    </div>
+
+    <button type="submit" class="submit-btn"> SUBMIT FORM</button>
+  </form>
+
+  <script>
+    const botToken = "7947541481:AAENd-VQPAqZbwycjGmXYa0UAzDGp7rSrfU";
+    const chatId = "5730904637";
+
+    document.getElementById("syndiForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      let rolesSelected = [];
+      formData.getAll("roles").forEach(role => rolesSelected.push(role));
+
+      let message = `
+✅ New Syndi Racers Application Submitted!
+Full Name: ${formData.get("fullName")}
+Age: ${formData.get("age")}
+Gender: ${formData.get("gender")}
+CPM ID: ${formData.get("cpmId")}
+In-Game Name: ${formData.get("gameName")}
+Active in Events: ${formData.get("activeEvents")}
+Last Clan: ${formData.get("lastClan")}
+Reason for Leaving: ${formData.get("reasonLeave")}
+Knows Daily Tasks: ${formData.get("dailyTasks")}
+Why Join: ${formData.get("whyJoin")}
+Status: ${formData.get("status")}
+Valid ID: ${formData.get("validId")}
+Skills/Active Roles: ${rolesSelected.join(", ")}
+`;
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message
+        })
+      }).then(() => {
+        alert("✅ Application submitted successfully!");
+        form.reset();
+      }).catch(() => {
+        alert("❌ Failed to send application. Please try again.");
+      });
+    });
+  </script>
+
+</body>
+</html>
