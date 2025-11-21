@@ -1,221 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BILLIONAIRE GANG APPLICATION FORM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #000080;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .form-container {
-      background: #000022;
-      padding: 25px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 500px;
-      border: 2px solid red;
-      box-shadow: 0 0 25px red, 0 0 50px rgba(255, 0, 0, 0.5);
-      color: white;
-      overflow-y: auto;
-      max-height: 95vh;
-      text-align: center;
-    }
-
-    h2, h3 {
-      margin-bottom: 10px;
-      font-weight: 600;
-      color: #ff0000;
-    }
-
-    h2 { font-size: 22px; }
-
-    p {
-      font-size: 12px;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #00bfff;
-      text-align: left;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid red;
-      background: #001144;
-      color: white;
-      border-radius: 5px;
-      outline: none;
-    }
-
-    input[type="file"] { padding: 8px; }
-
-    .checkbox-group {
-      margin-top: 10px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 20px;
-    }
-
-    .checkbox-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      color: #00bfff;
-    }
-
-    input[type="checkbox"] { width: 18px; height: 18px; accent-color: red; cursor: pointer; }
-
-    .submit-btn {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      background: red;
-      color: white;
-      border: none;
-      font-weight: 600;
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 0 0 10px red;
-      transition: 0.3s;
-    }
-
-    .submit-btn:hover {
-      box-shadow: 0 0 20px #00bfff;
-      background: #00bfff;
-      color: red;
-    }
-
-    /* Profile picture preview */
-    #profilePreview {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 2px solid red;
-      object-fit: cover;
-      margin: 10px auto 20px;
-      display: block;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Billionaire Gang Application Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; background:#000080; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; }
+.form-container { background:#000022; padding:25px; border-radius:12px; width:100%; max-width:500px; border:2px solid red; box-shadow:0 0 25px red,0 0 50px rgba(255,0,0,0.5); color:white; overflow-y:auto; max-height:95vh; text-align:center; }
+h2,h3 { margin-bottom:10px; font-weight:600; color:#ff0000; }
+h2{font-size:22px;}
+p{font-size:12px;color:#ddd;margin-bottom:20px;}
+label{display:block;margin-top:10px;font-size:14px;font-weight:500;color:#00bfff;text-align:left;}
+input,textarea,select,button{width:100%;padding:10px;margin-top:5px;border-radius:5px;border:none;background:#001144;color:white;outline:none;}
+input[type="file"]{background:#001144; border:1px solid red; color:white;}
+.checkbox-group{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;}
+.checkbox-item{display:flex;align-items:center;gap:8px;font-size:14px;color:#00bfff;}
+input[type="checkbox"]{width:18px;height:18px;accent-color:red;cursor:pointer;}
+.submit-btn{margin-top:20px;width:100%;padding:12px;background:red;color:white;border:none;font-weight:600;border-radius:5px;cursor:pointer;box-shadow:0 0 10px red;transition:0.3s;}
+.submit-btn:hover{box-shadow:0 0 20px #00bfff;background:#00bfff;color:red;}
+#profilePreview{width:100px;height:100px;border-radius:50%;border:2px solid red;object-fit:cover;margin:10px auto 20px;display:block;}
+</style>
 </head>
 <body>
 
 <form class="form-container" id="syndiForm" enctype="multipart/form-data">
-  <img id="profilePreview" src="https://i.postimg.cc/jjjsXvyw/received-1569793617784858.jpg" />
+<h2 id="greeting">GOOD MORNING / AFTERNOON / EVENING 🌙</h2>
+<!-- Static profile preview -->
+<img id="profilePreview" src="https://i.postimg.cc/s2VFzJmM/received-1569793617784858.jpg" alt="Profile Image">
 
-  <p>Please fill out the form to join. Be polite and respectful. Thank you!</p>
-  <h3>🔷 BILLIONAIRE GANG CLUB 🔷<br>🎮 APPLICATION FORM 🎮</h3>
+<p>Please fill out the form to join. Be polite and respectful. Thank you!</p>
+<h3>🔷 BILLIONAIRE GANG CLUB 🔷<br>🎮 APPLICATION FORM 🎮</h3>
 
-  <label>• Full Name:</label><input type="text" name="fullName" required>
-  <label>• Age:</label><input type="number" name="age" required>
-  <label>• Gender:</label>
-  <select name="gender">
-    <option>Male</option>
-    <option>Female</option>
-    <option>Other</option>
-  </select>
+<label>• Full Name:</label><input type="text" name="fullName" required>
+<label>• Age:</label><input type="number" name="age" required>
+<label>• Gender:</label><select name="gender"><option>Male</option><option>Female</option><option>Other</option></select>
 
-  <label>• CPM ID:</label><input type="text" name="cpmId" required>
-  <label>• In-Game Name:</label><input type="text" name="gameName" required>
+<label>• CPM ID:</label><input type="text" name="cpmId" required>
+<label>• In-Game Name:</label><input type="text" name="gameName" required>
 
-  <label>• Are you active in events like collabs, car meets, and competitions? (Yes/No):</label>
-  <input type="text" name="activeEvents">
+<label>• Are you active in events like collabs, car meets, and competitions? (Yes/No):</label>
+<input type="text" name="activeEvents">
 
-  <label>• Last Clan you joined:</label><input type="text" name="lastClan">
+<label>• Last Clan you joined:</label><input type="text" name="lastClan">
 
-  <label>• Why did you leave your last clan?</label><textarea name="reasonLeave"></textarea>
+<label>• Why did you leave your last clan?</label><textarea name="reasonLeave"></textarea>
 
-  <label>• Do you know how to do daily tasks? (Yes/No):</label>
-  <input type="text" name="dailyTasks">
+<label>• Do you know how to do daily tasks? (Yes/No):</label>
+<input type="text" name="dailyTasks">
 
-  <label>• Why do you want to join BILLIONAIRE GANG ?</label><textarea name="whyJoin"></textarea>
+<label>• Why do you want to join BILLIONAIRE GANG ?</label><textarea name="whyJoin"></textarea>
 
-  <label>• Are you a student or working?</label><input type="text" name="status">
+<label>• Are you a student or working?</label><input type="text" name="status">
 
-  <label>• Do you have a valid ID? (School ID / National ID):</label><input type="text" name="validId">
+<label>• Do you have a valid ID? (School ID / National ID):</label><input type="text" name="validId">
 
-  <label>📸 Upload your valid id (any more id type):</label>
-  <input type="file" name="photo" accept="image/*" id="photoInput">
+<label>📸 Upload your valid id (any more id type):</label>
+<input type="file" name="photo" accept="image/*" id="photoInput">
    
-  <label>✅ Select your skills / active roles:</label>
-  <div class="checkbox-group">
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Designer"> DESIGNER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Copier"> COPIER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Photographer"> PHOTOGRAPHER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Videographer"> VIDEOGRAPHER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Editor"> EDITOR</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Recruiter"> RECRUITER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="GG User"> GG USER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Termux User"> TERMUX USER</label>
-    <label class="checkbox-item"><input type="checkbox" name="roles" value="Content Creator"> CONTENT CREATOR</label>
-  </div>
+<label>✅ Select your skills / active roles:</label>
+<div class="checkbox-group">
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Designer"> DESIGNER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Copier"> COPIER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Photographer"> PHOTOGRAPHER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Videographer"> VIDEOGRAPHER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Editor"> EDITOR</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Recruiter"> RECRUITER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="GG User"> GG USER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Termux User"> TERMUX USER</label>
+<label class="checkbox-item"><input type="checkbox" name="roles" value="Content Creator"> CONTENT CREATOR</label>
+</div>
 
-  <button type="submit" class="submit-btn"> SUBMIT FORM</button>
+<button type="submit" class="submit-btn"> SUBMIT FORM</button>
 </form>
 
 <script>
-  // Dynamic greeting
-  const greetingEl = document.getElementById('greeting');
-  const hour = new Date().getHours();
-  if(hour >= 0 && hour < 12) greetingEl.textContent = "GOOD MORNING 🌞";
-  else if(hour >= 12 && hour < 18) greetingEl.textContent = "GOOD AFTERNOON ☀️";
-  else greetingEl.textContent = "GOOD EVENING 🌙";
+// Dynamic greeting
+const greetingEl = document.getElementById('greeting');
+const hour = new Date().getHours();
+if(hour<12) greetingEl.textContent="GOOD MORNING 🌞";
+else if(hour<18) greetingEl.textContent="GOOD AFTERNOON ☀️";
+else greetingEl.textContent="GOOD EVENING 🌙";
 
-  // Profile preview live (file or URL)
-  const photoInput = document.getElementById('photoInput');
-  const imageUrlInput = document.getElementById('imageUrl');
-  const profilePreview = document.getElementById('profilePreview');
+// Telegram Bot Config
+const botToken = "7947541481:AAENd-VQPAqZbwycjGmXYa0UAzDGp7rSrfU";
+const chatIds = ["5730904637","-1003190741318","6614066633"]; // replace with your 3 Telegram IDs / group IDs
 
-  photoInput.addEventListener('change', () => {
-    const file = photoInput.files[0];
-    if(file){
-      const reader = new FileReader();
-      reader.onload = e => profilePreview.src = e.target.result;
-      reader.readAsDataURL(file);
-      imageUrlInput.value = ""; // clear URL
-    }
-  });
-
-  imageUrlInput.addEventListener('input', () => {
-    const url = imageUrlInput.value.trim();
-    if(url){
-      profilePreview.src = url;
-      photoInput.value = ""; // clear file
-    } else {
-      profilePreview.src = "https://via.placeholder.com/100/00ff00/000000?text=Profile";
-    }
-  });
-
-  // Telegram send
-  const botToken = "7947541481:AAENd-VQPAqZbwycjGmXYa0UAzDGp7rSrfU";
-  const chatIds = "5730904637,-1003190741318,6614066633"; 
-
-  document.getElementById("syndiForm").addEventListener("submit", async function(e){
+document.getElementById('syndiForm').addEventListener('submit', async function(e){
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const rolesSelected = formData.getAll("roles");
 
-    const message = `
-✅ New BILLIONAIRE GANG Application Submitted!
+    const message = `✅ New BILLIONAIRE GANG Application Submitted!
 Full Name: ${formData.get("fullName")}
 Age: ${formData.get("age")}
 Gender: ${formData.get("gender")}
@@ -228,47 +105,29 @@ Knows Daily Tasks: ${formData.get("dailyTasks")}
 Why Join: ${formData.get("whyJoin")}
 Status: ${formData.get("status")}
 Valid ID: ${formData.get("validId")}
-Skills/Active Roles: ${rolesSelected.join(", ")}
-`;
+Skills/Active Roles: ${rolesSelected.join(", ")}`;
 
-    const ids = chatIds.split(",");
-    const filePhoto = formData.get("photo");
-    const urlPhoto = imageUrlInput.value.trim();
+    const filePhoto = document.getElementById('photoInput').files[0];
 
-    for(const id of ids){
-      if(urlPhoto){
-        await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-            chat_id: id.trim(),
-            photo: urlPhoto,
-            caption: message
-          })
-        });
-      } else if(filePhoto && filePhoto.size > 0){
-        const sendPhoto = new FormData();
-        sendPhoto.append("chat_id", id.trim());
-        sendPhoto.append("caption", message);
-        sendPhoto.append("photo", filePhoto);
-
-        await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
-          method: "POST",
-          body: sendPhoto
-        });
-      } else {
-        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({chat_id: id.trim(), text: message})
-        });
-      }
+    for(const chatId of chatIds){
+        if(filePhoto){
+            const sendData = new FormData();
+            sendData.append("chat_id", chatId);
+            sendData.append("caption", message);
+            sendData.append("photo", filePhoto);
+            await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {method:"POST", body:sendData});
+        } else {
+            await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method:"POST",
+                headers:{"Content-Type":"application/json"},
+                body: JSON.stringify({chat_id:chatId,text:message})
+            });
+        }
     }
 
     alert("✅ Application submitted successfully!");
     form.reset();
-    profilePreview.src = "https://i.postimg.cc/jjjsXvyw/received-1569793617784858.jpg";
-  });
+});
 </script>
 
 </body>
